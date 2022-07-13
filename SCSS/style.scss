@@ -1,0 +1,53 @@
+@import "index.scss";
+@import "blog.scss";
+@import "contacto.scss";
+@import "software.scss";
+@import "productos-recomendados.scss";
+@import "footer.scss";
+@import "partials/base";
+main{
+    margin: 54px 0px;
+}
+.imagenCarruselXL{
+    width: 600px;
+    height: auto;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: $fondo;
+}
+h2,h3,h4,h5,h6{
+    font-family: $otrosEncabezados;
+    font-weight: 700;
+    color: map-get($color-titulo , encabezado );
+}
+h1{
+    font-family:$h1;
+    font-weight: 800;
+    font-size: 2.7em;
+    color: map-get($color-titulo , titulo );
+}
+.navbar{
+    background-color: $base;
+    div{
+        background-color: $base;
+    }
+}
+a{
+    text-decoration: none;
+    color: nth($complementarios, 1 );
+}
+p{
+    font-family: $texto;
+    color: nth($complementarios, 1 );
+}
+.icono{
+    width:32px;
+}
+strong{
+    color:map-get($color-titulo, strong )
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Montserrat:wght@300&family=Oswald:wght@300&display=swap');

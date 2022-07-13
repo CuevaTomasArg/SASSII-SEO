@@ -1,0 +1,29 @@
+@import "partials/base";
+footer{
+    background-color: $base;
+    .listaHorizontal,.lista,.listaFooter1{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        li{
+            margin:12px;
+            a{
+                color: nth($lista-colores, 1 );
+            }
+        }
+    }
+    .lista,.listaFooter1{
+        flex-direction: column;
+        list-style-type: none;
+        align-items: center;
+        justify-items:center;
+        padding-left: 16px;
+        padding-right: 16px;
+        p{
+            text-align: center;
+        }
+    }
+    .listaHorizontal{
+        flex-direction: row;
+    }
+}

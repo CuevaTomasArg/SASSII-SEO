@@ -1,0 +1,62 @@
+@import "partials/base";
+.formulario{
+    background-color: $base;
+    @media only screen and(min-width:375px) and (max-width:600px){
+        margin: 64px 0px;
+    }
+    form{
+        width: 65%;
+        display: grid;
+        grid-template-areas: 
+        "nombre email asunto"
+        "texto texto texto";
+        justify-content: center;
+        align-items: stretch;
+        margin: 32px auto;
+        @media only screen and (min-width:375px) and (max-width:600px){
+            display: flex;
+            flex-direction: column;
+            textarea{
+                height: 200px;
+            }
+        }
+            >div{
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                margin: 16px 32px;
+                @media only screen and (min-width:375px) and (max-width:600px){
+                    margin: 16px;
+                }
+                label{
+                    font-family: $texto;
+                }
+                input{
+                    height: 48px;
+
+                }
+            }
+            .nombre{
+                grid-area: nombre;
+            }
+            .email{
+                grid-area: email;
+            }
+            .whatsapp{
+                grid-area:asunto;
+            } 
+            .areaTexto{
+                grid-area:texto;
+            }
+            button{
+                @include button(80px,48px,16px);
+                margin: 16px;
+                border: 0px solid transparent;
+                font-family: $h1;
+                text-align: center;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+            }
+        } 
+    }

@@ -1,0 +1,104 @@
+@import "partials/base";
+.h1programas{
+    margin: 16px 64px;
+}
+
+.recomendados{
+    background-color: $base;
+    height: 300px;
+    .porque{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        margin: 54px auto;
+    }
+}
+.porqueRecomendamos{
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "parrafo1 parrafo2" ;
+    gap: 32px;
+    h2{
+        grid-area: titulo;
+        margin: 16px auto;
+        font-weight: 700;
+
+    }
+    div{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0px auto;
+        text-align: center;
+        img{
+        width: 64px;
+        height: 64px;
+        margin: 80px auto;;
+    }
+    .seguridad{
+        grid-area: parrafo1;
+    }
+    .educacion{
+        grid-area: parrafo2;
+    }
+    }
+}
+.seccionCardsHorizontales{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9,1fr);
+    margin:54px 128px;
+    >div{
+        margin: 32px 64px;
+        height: 90%;
+        box-shadow: 2px 2px 10px #a5a5a5;
+        @media only screen and (min-width:375px) and(max-width:900px){
+            display: flex;
+            flex-direction: column;
+        }
+        >div>div{
+            margin:auto;
+        }
+        .imagenProductoM{
+            width: 55%;
+            margin: auto;
+        }
+    }
+    button{
+        @extend %CallToAction
+    }
+}
+.complementosRecomendados{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    align-items: stretch;
+    justify-content:center;
+    margin:54px 128px;
+    gap: 48px;
+    >div{
+        box-shadow: 2px 2px 10px #a5a5a5;
+        transition: all 1.5s;
+        &hover{
+            animation:izqder 1.5s;
+            @keyframes izqder {
+                10%{transform: translateX(2px);}
+                20%{transform: translateX(-2px);}
+                30%{transform: translateX(2px);}
+                40%{transform: translateX(-2px);}
+                50%{transform: translateX(2px);}
+                60%{transform: translateX(-2px);}
+                70%{transform: translateX(2px);}
+                80%{transform: translateX(-2px);}
+                90%{transform: translateX(2px);}
+                100%{transform: translateX(-2px);}
+            }
+        }
+    }
+}
